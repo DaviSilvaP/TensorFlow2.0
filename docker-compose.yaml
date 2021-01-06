@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu-jupyter
+    container_name: 'tf_gpu'
+    runtime: nvidia
+    ports:
+      - 8888:8888
+    volumes:
+      - ./Notebooks:/tf/Notebooks
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
