@@ -5,7 +5,8 @@ services:
     container_name: 'tf_gpu'
     runtime: nvidia
     ports:
-      - 8888:8888
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:6006:6006"
     volumes:
       - ./Notebooks:/tf/Notebooks
     environment:
